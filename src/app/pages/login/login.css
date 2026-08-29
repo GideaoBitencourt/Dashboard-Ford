@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    color: #101010;
+    min-height: 100vh;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* IMAGEM DO MUSTANG */
+
+main > section:first-child {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-mustang-azul {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* FORMULÁRIO */
+
+.formulario-login {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LOGO */
+
+.logo-ford-login {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.logo-ford-login img {
+    width: 130px;
+    height: auto;
+}
+
+
+/* TÍTULO */
+
+.formulario-login h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.campo label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campo input {
+    width: auto;
+    height: 48px;
+    padding: 0 15px;
+
+    border: 2px solid #686666;
+    border-radius: 6px;
+
+    font-size: 15px;
+    color: #101010;
+
+    outline: none;
+    transition: 0.3s;
+}
+
+.campo input::placeholder {
+    color: #888888;
+}
+
+.campo input:focus {
+    border-color: #1b4f9c;
+    box-shadow: 0 0 0 2px rgba(27, 79, 156, 0.12);
+}
+
+
+/* LOGIN AUTOMÁTICO */
+
+form > div:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0 30px;
+}
+
+form > div:nth-of-type(3) p {
+    font-size: 14px;
+    color: #444444;
+}
+
+
+/* BOTÃO DO TOGGLE */
+
+.login-automatico {
+    position: relative;
+
+    width: 45px;
+    height: 24px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #d0d0d0;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* BOLINHA DO TOGGLE */
+
+.login-automatico::before {
+    content: "";
+
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    top: 3px;
+    left: 3px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    transition: 0.3s;
+}
+
+
+/* BOTÃO ENTRAR */
+
+.botao-login {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #1769aa;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao-login:hover {
+    background-color: #0f4f82;
+    transform: translateY(-2px);
+}
+
+.botao-login:active {
+    transform: translateY(0);
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    main {
+        gap: 40px;
+    }
+
+    main > section:first-child {
+        width: 45%;
+    }
+
+    .formulario-login {
+        width: 350px;
+    }
+
+    .secao-imagem {
+        display: flex;
+    }
+
+    .img-mustang-azul {
+        max-width: 500px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    main {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    main > section:first-child {
+        width: 100%;
+    }
+
+    .img-mustang-azul {
+        width: 80%;
+        max-width: 450px;
+    }
+
+    .formulario-login {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    main {
+        padding: 25px 20px;
+    }
+
+    .img-mustang-azul {
+        width: 100%;
+    }
+
+    .logo-ford-login img {
+        width: 110px;
+    }
+
+    .formulario-login h1 {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    .campo input {
+        height: 46px;
+    }
+
+    .botao-login {
+        height: 48px;
+    }
+}
