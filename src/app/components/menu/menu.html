@@ -1,1 +1,25 @@
-<p>menu works!</p>
+<div class="menu-abrir" 
+    [class.menu-aberto]="mostrarElemento"
+    (click)="mostrar()">
+    &#9776;
+</div>
+
+<div 
+    class="overlay-escuro" 
+    *ngIf="mostrarElemento"
+    (click)="mostrar()">
+</div>
+
+<nav class="menu-lateral" [class.menu-aberto]="mostrarElemento">
+
+    <div class="menu-logo">
+        <img src="img/ford.png" alt="Logo Ford">
+    </div>
+
+    <div class="menu-links">
+        <a href="">Home</a>
+        <a href="">Dashboard</a>
+        <button type="button">Logout</button>
+    </div>
+
+</nav>
