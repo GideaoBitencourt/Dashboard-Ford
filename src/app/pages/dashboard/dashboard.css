@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+main {
+    font-family: "Roboto", sans-serif;
+}
+
+
+.titulo-ford {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 55px;
+    font-size: 40px;
+    font-weight: 600;
+    color:#004085
+
+}
+
+.imagem-carro {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-carro img {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 14px;
+    border: 2px solid #060a0e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da tabela (Azul Escuro) */
+thead tr {
+    background-color: #004085;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    border: 2px solid #060a0e;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 2px solid #060a0e;
+    text-align: center;
+}
+
+
+tbody tr:hover {
+    background-color: #d1e0fc;
+    color: #0c0c0c;
+}

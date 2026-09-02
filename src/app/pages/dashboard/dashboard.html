@@ -1,1 +1,44 @@
-<p>dashboard works!</p>
+<app-menu></app-menu>
+
+<main>
+    <section class="dashboard-principal">
+        <h1 class="titulo-ford">Dashboard FORD</h1>
+    </section>
+
+    <section class="cards">
+        <app-campo></app-campo>
+            <!-- aqui vai ficar os quadradinhos-->        
+    </section>
+
+
+    <section class="imagem-carro">
+        <div>
+            <img src="img/ranger.png" alt="Imagem do carro">
+        </div>
+    </section>
+
+    <section class="tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>Código - Vin</th>
+                    <th>Odômetro</th>
+                    <th>Nível de Combustível</th>
+                    <th>Status</th>
+                    <th>Lat.</th>
+                    <th>Long.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09401503i1514</td>
+                    <td>50000 km</td>
+                    <td>80%</td>
+                    <td>Ativo</td>
+                    <td>-23.5505</td>
+                    <td>-46.6333</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
