@@ -67,17 +67,19 @@
     margin-top: 50px;
 }
 
-.menu-links button {
-    padding: 15px;    
-    margin: 0px 10px 0px 10px;
+.menu-logout button {    
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    margin-bottom: 24px;
+    margin-left: 15px;
+    padding: 15px;
     font-size: 17px;
     border-radius: 5px;
-
+    background-color: rgb(250, 55, 55);
     border: none;
-    background: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    text-align: center;
     cursor: pointer;
     transition: 0.3s;
 }

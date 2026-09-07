@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth } from '../../services/auth';
 
 
 @Component({
@@ -17,10 +18,10 @@ export class Menu {
     this.mostrarElemento = !this.mostrarElemento;
   }
 
-  constructor(private router: Router) {}
-
+  constructor(private authService: Auth) {}
 
   logout(): void {
-    this.router.navigate(['/login']);
+    //repassa a ordem para a função logout() que está no auth.ts
+    this.authService.logout(); 
   }
 }
