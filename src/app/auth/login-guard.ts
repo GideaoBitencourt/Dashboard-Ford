@@ -10,7 +10,7 @@ export const loginGuard: CanActivateFn = (route, state) => {
   // Se o usuário já está logado e tenta acessar o login:
   if (authService.estaLogado()) {
     // Chuta de volta pro dashboard e bloqueia a tela de login
-    router.navigate(['/dashboard']); 
+    router.navigate(['/home']); 
     return false;
   }
 

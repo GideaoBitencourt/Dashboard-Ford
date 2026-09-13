@@ -5,19 +5,54 @@
         <h1 class="titulo-ford">Dashboard FORD</h1>
     </section>
 
-    <section class="cards">
-        <app-campo></app-campo>
-            <!-- aqui vai ficar os quadradinhos-->        
-    </section>
+    <div class="cards-container">
 
+        <section class="card">
+            <h1>Veículo</h1>
+
+            <select id="veiculo" name="veiculo" (change)="veiculoEscolhido($event)">
+
+                <option value="" selected disabled hidden>
+                    Selecione uma opção
+                </option>
+
+                <option value="" *ngFor="let v of veiculos" [value]="v.id">
+                    {{v.vehicle}}
+                </option>
+
+            </select>
+
+        </section>
+
+        <section class="card">
+            <h1>Total de Vendas</h1>
+            <p>{{ veiculoSelecionado?.volumetotal || 0}}</p>
+            <p>Unid</p>
+        </section>
+
+
+        <section class="card">
+            <h1>Conectados</h1>
+            <p>{{ veiculoSelecionado?.connected || 0}}</p>
+            <p>Unid</p>
+
+        </section>
+
+        <section class="card">
+            <h1>Update Software</h1>
+            <p> {{ veiculoSelecionado?.softwareUpdates || 0}} </p>
+            <p>Unid</p>
+        </section>
+    </div>
 
     <section class="imagem-carro">
         <div>
-            <img src="img/ranger.png" alt="Imagem do carro">
+            <img *ngIf="veiculoSelecionado" [src]="veiculoSelecionado.img" alt="veiculoSelecionado.vehicle">
         </div>
     </section>
 
     <section class="tabela">
+
         <table>
             <thead>
                 <tr>
@@ -31,12 +66,35 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>09401503i1514</td>
-                    <td>50000 km</td>
-                    <td>80%</td>
-                    <td>Ativo</td>
-                    <td>-23.5505</td>
-                    <td>-46.6333</td>
+                    <td>
+                        <div class="buscar-vin">
+                            <input type="text" [(ngModel)]="vin" placeholder="Digite o código VIN">
+
+                            <button (click)="buscarVeiculo()">
+                                Buscar
+                            </button>
+                        </div>
+                    </td>
+
+                    <td>
+                        {{ vehicleData?.odometro || '-' }}
+                    </td>
+
+                    <td>
+                        {{ vehicleData?.nivelCombustivel || '-' }}
+                    </td>
+
+                    <td>
+                        {{ vehicleData?.status || '-' }}
+                    </td>
+
+                    <td>
+                        {{ vehicleData?.lat || '-' }}
+                    </td>
+
+                    <td>
+                        {{ vehicleData?.long || '-' }}
+                    </td>
                 </tr>
             </tbody>
         </table>

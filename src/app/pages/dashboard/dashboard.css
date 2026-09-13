@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 main {
+    
     font-family: "Roboto", sans-serif;
 }
 
@@ -18,15 +19,89 @@ main {
 }
 
 .imagem-carro {
+    height: 340px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .imagem-carro img {
     width: 100%;
     max-width: 600px;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 300px;
+    height: 100px;
+    padding: 15px;
     margin-top: 45px;
-    margin-bottom: 45px;
+    background-color: #f3f5f7;
+    border: 3px solid #004085;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+.card h1 {
+    margin: 0;
+
+    font-size: 20px;
+    color: #222427;
+    text-align: center;
+}
+
+.card p {
+    margin: 0;
+
+    font-size: 18px;
+    color: #0256b0;
+    
+
+    text-align: start;
+}
+
+
+.card select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    background-color: #f8fafc;
+
+    color: #333;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.card select:hover {
+    border-color: #147bd1;
+}
+
+.card select:focus {
+    border-color: #147bd1;
+
+    box-shadow: 0 0 0 2px rgba(20, 123, 209, 0.15);
 }
 
 table {
@@ -48,13 +123,66 @@ thead tr {
 }
 
 th, td {
-    padding: 12px 15px;
+    padding: 7px 15px;
     border: 2px solid #060a0e;
     text-align: center;
 }
 
 
 tbody tr:hover {
-    background-color: #d1e0fc;
+    background-color: #e9effa;
     color: #0c0c0c;
 }
+
+.tabela td:first-child {
+    white-space: nowrap;
+}
+
+.buscar-vin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.buscar-vin input {
+    width: 214px;
+    height: 36px;
+    padding: 0 12px;
+    box-sizing: border-box;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.buscar-vin input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+.buscar-vin input::placeholder {
+    color: #999;
+}
+
+.buscar-vin button {
+    height: 40px;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: #007bff;
+    color: white;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buscar-vin button:hover {
+    background-color: #0056b3;
+}
+
