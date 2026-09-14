@@ -122,46 +122,6 @@ form > div:nth-of-type(3) p {
     color: #444444;
 }
 
-
-/* BOTÃO DO TOGGLE */
-
-.login-automatico {
-    position: relative;
-
-    width: 45px;
-    height: 24px;
-
-    border: none;
-    border-radius: 20px;
-
-    background-color: #d0d0d0;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-/* BOLINHA DO TOGGLE */
-
-.login-automatico::before {
-    content: "";
-
-    position: absolute;
-
-    width: 18px;
-    height: 18px;
-
-    top: 3px;
-    left: 3px;
-
-    background-color: white;
-    border-radius: 50%;
-
-    transition: 0.3s;
-}
-
-
 /* BOTÃO ENTRAR */
 
 .botao-login {
